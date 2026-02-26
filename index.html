@@ -11,8 +11,8 @@
         content="barbería, barbería urbana, corte de pelo, afeitado, barber shop, peluquería masculina">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/img/logo.png" type="image/png">
-    <!-- Calendly CSS -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <!-- Font Awesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -65,10 +65,10 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="#reservar" class="btn-primary" id="hero-cta-reservar">
-                        ✂ Reservar Cita
+                        <i class="fa-solid fa-scissors"></i> Reservar Cita
                     </a>
                     <a href="#servicios" class="btn-secondary" id="hero-cta-servicios">
-                        Ver Servicios
+                        <i class="fa-solid fa-arrow-down"></i> Ver Servicios
                     </a>
                 </div>
             </div>
@@ -99,25 +99,33 @@
             </div>
             <div class="services-grid">
                 <div class="service-card animate-on-scroll" id="service-corte">
-                    <span class="service-icon">✂️</span>
+                    <div class="service-icon-wrap">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
                     <h3>Corte Clásico</h3>
                     <p>Corte a tijera o máquina con consulta personalizada. Incluye lavado y styling final.</p>
                     <div class="service-price">15€ <span>/ sesión</span></div>
                 </div>
                 <div class="service-card animate-on-scroll" id="service-fade">
-                    <span class="service-icon">💈</span>
+                    <div class="service-icon-wrap">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
                     <h3>Degradado & Fade</h3>
                     <p>Degradados perfectos con transiciones impecables. Low, mid o high fade a tu elección.</p>
                     <div class="service-price">18€ <span>/ sesión</span></div>
                 </div>
                 <div class="service-card animate-on-scroll" id="service-barba">
-                    <span class="service-icon">🪒</span>
+                    <div class="service-icon-wrap">
+                        <i class="fa-solid fa-razor"></i>
+                    </div>
                     <h3>Arreglo de Barba</h3>
                     <p>Perfilado, recorte y tratamiento con aceites naturales para una barba impecable.</p>
                     <div class="service-price">12€ <span>/ sesión</span></div>
                 </div>
                 <div class="service-card animate-on-scroll" id="service-completo">
-                    <span class="service-icon">👑</span>
+                    <div class="service-icon-wrap">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
                     <h3>Pack Completo</h3>
                     <p>Corte + barba + tratamiento capilar. La experiencia VIP completa de principio a fin.</p>
                     <div class="service-price">30€ <span>/ sesión</span></div>
@@ -141,7 +149,9 @@
                     title="Feed de Instagram de Urban Barber Studio"></iframe>
             </div>
             <div class="instagram-follow-cta animate-on-scroll">
-                <a href="#" class="btn-secondary" id="instagram-follow-btn">📸 Seguir en Instagram</a>
+                <a href="#" class="btn-secondary" id="instagram-follow-btn">
+                    <i class="fa-brands fa-instagram"></i> Seguir en Instagram
+                </a>
             </div>
         </div>
     </section>
@@ -198,7 +208,13 @@
                 </p>
             </div>
             <div class="calendly-wrapper animate-on-scroll">
-                <div id="calendly-container"></div>
+                <!-- Principio del widget integrado de Calendly -->
+                <div class="calendly-inline-widget"
+                    data-url="https://calendly.com/carbayo-carbal-pablo9?hide_gdpr_banner=1"
+                    style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
+                    async></script>
+                <!-- Final del widget integrado de Calendly -->
             </div>
         </div>
     </section>
@@ -213,25 +229,31 @@
                     También puedes contactarnos directamente. Estaremos encantados de atenderte.
                 </p>
                 <a href="tel:+34600000000" class="btn-primary" id="cta-reservar">
-                    📞 Llamar Ahora
+                    <i class="fa-solid fa-phone"></i> Llamar Ahora
                 </a>
                 <div class="cta-contact-info">
                     <div class="cta-contact-item">
-                        <span class="icon">📍</span>
+                        <div class="contact-icon-wrap">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
                         <div class="info">
                             <div class="label">Dirección</div>
                             <div class="value">Calle Principal 42, Madrid</div>
                         </div>
                     </div>
                     <div class="cta-contact-item">
-                        <span class="icon">🕐</span>
+                        <div class="contact-icon-wrap">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
                         <div class="info">
                             <div class="label">Horario</div>
                             <div class="value">Lun – Sáb: 10:00 – 20:00</div>
                         </div>
                     </div>
                     <div class="cta-contact-item">
-                        <span class="icon">📱</span>
+                        <div class="contact-icon-wrap">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
                         <div class="info">
                             <div class="label">Teléfono</div>
                             <div class="value">+34 600 000 000</div>
@@ -250,9 +272,9 @@
                 <p>© 2026 <span>Urban Barber Studio</span>. Todos los derechos reservados.</p>
             </div>
             <div class="footer-social">
-                <a href="#" aria-label="Instagram" id="social-instagram">📷</a>
-                <a href="#" aria-label="TikTok" id="social-tiktok">🎵</a>
-                <a href="#" aria-label="WhatsApp" id="social-whatsapp">💬</a>
+                <a href="#" aria-label="Instagram" id="social-instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok" id="social-tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="WhatsApp" id="social-whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
@@ -328,57 +350,6 @@
                     });
                 }
             });
-        });
-    </script>
-
-    <!-- Calendly Widget Script -->
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script>
-        function fixCalendlyIframe() {
-            const container = document.getElementById('calendly-container');
-            const wrapper = document.querySelector('.calendly-wrapper');
-            if (!container) return;
-
-            const iframe = container.querySelector('iframe');
-            if (iframe) {
-                iframe.style.height = '700px';
-                iframe.style.minHeight = '700px';
-                iframe.style.width = '100%';
-                iframe.style.border = 'none';
-                if (wrapper) wrapper.classList.add('loaded');
-                return true;
-            }
-            return false;
-        }
-
-        window.addEventListener('load', function () {
-            if (typeof Calendly !== 'undefined') {
-                Calendly.initInlineWidget({
-                    url: 'https://calendly.com/carbayo-carbal-pablo9/30min',
-                    parentElement: document.getElementById('calendly-container')
-                });
-
-                // Watch for the iframe to appear and fix its size
-                const observer = new MutationObserver(function () {
-                    if (fixCalendlyIframe()) {
-                        observer.disconnect();
-                    }
-                });
-
-                observer.observe(document.getElementById('calendly-container'), {
-                    childList: true,
-                    subtree: true
-                });
-
-                // Fallback: poll every 500ms for 10 seconds
-                let attempts = 0;
-                const interval = setInterval(function () {
-                    attempts++;
-                    if (fixCalendlyIframe() || attempts > 20) {
-                        clearInterval(interval);
-                    }
-                }, 500);
-            }
         });
     </script>
 
