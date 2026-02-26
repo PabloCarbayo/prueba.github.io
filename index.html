@@ -1,24 +1,387 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba de Iframe Taggbox</title>
-    <style>
-        /* Restablecemos márgenes y aseguramos que el contenedor ocupe el 100% de la pantalla */
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100vh; /* 100% del alto de la ventana del navegador */
-            background-color: #f4f4f4; /* Color de fondo por si el widget tarda en cargar */
-            overflow: hidden; /* Evitamos que salgan barras de desplazamiento dobles */
-        }
-    </style>
+    <title>Urban Barber Studio — Barbería Urbana Premium</title>
+    <meta name="description"
+        content="Barbería urbana con estilo premium. Cortes, afeitados y tratamientos capilares de primera calidad. Reserva tu cita hoy.">
+    <meta name="keywords"
+        content="barbería, barbería urbana, corte de pelo, afeitado, barber shop, peluquería masculina">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <!-- Calendly CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <iframe src="https://widget.taggbox.com/318031?website=1" allow="fullscreen" style="width:100%;height:100%;overflow:auto;border:none;"></iframe>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand" id="brand-logo">
+                <img src="assets/img/logo.png" alt="Urban Barber Studio Logo">
+                <div class="navbar-brand-text">
+                    <span class="navbar-brand-name">Urban Barber</span>
+                    <span class="navbar-brand-tagline">Studio & Grooming</span>
+                </div>
+            </a>
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="#inicio" id="nav-inicio">Inicio</a></li>
+                <li><a href="#servicios" id="nav-servicios">Servicios</a></li>
+                <li><a href="#instagram" id="nav-instagram">Instagram</a></li>
+                <li><a href="#nosotros" id="nav-nosotros">Nosotros</a></li>
+                <li><a href="#reservar" class="navbar-cta" id="nav-contacto">Reservar</a></li>
+            </ul>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg">
+            <img src="assets/img/hero.png" alt="Interior de barbería urbana premium">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    <span>Barbería Urbana Premium</span>
+                </div>
+                <h1>
+                    <span class="line">Estilo que</span>
+                    <span class="line"><span class="highlight">define</span> tu</span>
+                    <span class="line">identidad</span>
+                </h1>
+                <p class="hero-description">
+                    Más que un corte, una experiencia. Combinamos técnicas de barbería clásica con las últimas
+                    tendencias urbanas para crear tu look perfecto.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#reservar" class="btn-primary" id="hero-cta-reservar">
+                        ✂ Reservar Cita
+                    </a>
+                    <a href="#servicios" class="btn-secondary" id="hero-cta-servicios">
+                        Ver Servicios
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative circles -->
+        <div class="hero-decor">
+            <div class="hero-decor-circle"></div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="services-header animate-on-scroll">
+                <span class="section-label">Nuestros Servicios</span>
+                <h2 class="section-title">Servicios <span class="gold">Premium</span></h2>
+                <p class="section-description">
+                    Cada servicio está diseñado para ofrecerte una experiencia única de cuidado personal con la máxima
+                    calidad.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll" id="service-corte">
+                    <span class="service-icon">✂️</span>
+                    <h3>Corte Clásico</h3>
+                    <p>Corte a tijera o máquina con consulta personalizada. Incluye lavado y styling final.</p>
+                    <div class="service-price">15€ <span>/ sesión</span></div>
+                </div>
+                <div class="service-card animate-on-scroll" id="service-fade">
+                    <span class="service-icon">💈</span>
+                    <h3>Degradado & Fade</h3>
+                    <p>Degradados perfectos con transiciones impecables. Low, mid o high fade a tu elección.</p>
+                    <div class="service-price">18€ <span>/ sesión</span></div>
+                </div>
+                <div class="service-card animate-on-scroll" id="service-barba">
+                    <span class="service-icon">🪒</span>
+                    <h3>Arreglo de Barba</h3>
+                    <p>Perfilado, recorte y tratamiento con aceites naturales para una barba impecable.</p>
+                    <div class="service-price">12€ <span>/ sesión</span></div>
+                </div>
+                <div class="service-card animate-on-scroll" id="service-completo">
+                    <span class="service-icon">👑</span>
+                    <h3>Pack Completo</h3>
+                    <p>Corte + barba + tratamiento capilar. La experiencia VIP completa de principio a fin.</p>
+                    <div class="service-price">30€ <span>/ sesión</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INSTAGRAM FEED ===== -->
+    <section class="instagram-feed" id="instagram">
+        <div class="container">
+            <div class="instagram-header animate-on-scroll">
+                <span class="section-label">Síguenos</span>
+                <h2 class="section-title">Nuestro <span class="gold">Instagram</span></h2>
+                <p class="section-description">
+                    Descubre nuestros últimos trabajos, tendencias y el día a día en nuestro estudio.
+                </p>
+            </div>
+            <div class="instagram-widget-wrapper animate-on-scroll">
+                <iframe src="https://widget.taggbox.com/318031?website=1" allow="fullscreen"
+                    title="Feed de Instagram de Urban Barber Studio"></iframe>
+            </div>
+            <div class="instagram-follow-cta animate-on-scroll">
+                <a href="#" class="btn-secondary" id="instagram-follow-btn">📸 Seguir en Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image animate-on-scroll">
+                    <img src="assets/img/hero.png" alt="Equipo de Urban Barber Studio">
+                    <div class="about-image-border"></div>
+                </div>
+                <div class="about-text animate-on-scroll">
+                    <span class="section-label">Sobre Nosotros</span>
+                    <h2 class="section-title">Donde el <span class="gold">arte</span> urbano<br>se encuentra con la
+                        <span class="gold">tradición</span>
+                    </h2>
+                    <div class="gold-divider"></div>
+                    <p class="section-description">
+                        Nacimos de la cultura urbana y la pasión por el detalle. Nuestro estudio es un espacio donde
+                        cada cliente se siente en casa mientras recibe un servicio de primer nivel.
+                    </p>
+                    <br>
+                    <p class="section-description">
+                        Creatividad, precisión y actitud. Eso es lo que nos define.
+                    </p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="number">5+</span>
+                            <span class="label">Años de experiencia</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="number">3K+</span>
+                            <span class="label">Clientes satisfechos</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="number">4.9</span>
+                            <span class="label">Valoración media</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESERVAR / CALENDLY ===== -->
+    <section class="booking-section" id="reservar">
+        <div class="container">
+            <div class="booking-header animate-on-scroll">
+                <span class="section-label">Reserva tu cita</span>
+                <h2 class="section-title">Agenda tu <span class="gold">cita</span> online</h2>
+                <p class="section-description">
+                    Elige el día y la hora que mejor te vengan. Rápido, fácil y sin esperas.
+                </p>
+            </div>
+            <div class="calendly-wrapper animate-on-scroll">
+                <div id="calendly-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT INFO ===== -->
+    <section class="cta-section" id="contacto">
+        <div class="container">
+            <div class="cta-box animate-on-scroll">
+                <span class="section-label">Contacto</span>
+                <h2 class="section-title">¿Prefieres <span class="gold">llamarnos</span>?</h2>
+                <p class="section-description">
+                    También puedes contactarnos directamente. Estaremos encantados de atenderte.
+                </p>
+                <a href="tel:+34600000000" class="btn-primary" id="cta-reservar">
+                    📞 Llamar Ahora
+                </a>
+                <div class="cta-contact-info">
+                    <div class="cta-contact-item">
+                        <span class="icon">📍</span>
+                        <div class="info">
+                            <div class="label">Dirección</div>
+                            <div class="value">Calle Principal 42, Madrid</div>
+                        </div>
+                    </div>
+                    <div class="cta-contact-item">
+                        <span class="icon">🕐</span>
+                        <div class="info">
+                            <div class="label">Horario</div>
+                            <div class="value">Lun – Sáb: 10:00 – 20:00</div>
+                        </div>
+                    </div>
+                    <div class="cta-contact-item">
+                        <span class="icon">📱</span>
+                        <div class="info">
+                            <div class="label">Teléfono</div>
+                            <div class="value">+34 600 000 000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-left">
+                <img src="assets/img/logo.png" alt="Urban Barber Studio">
+                <p>© 2026 <span>Urban Barber Studio</span>. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram" id="social-instagram">📷</a>
+                <a href="#" aria-label="TikTok" id="social-tiktok">🎵</a>
+                <a href="#" aria-label="WhatsApp" id="social-whatsapp">💬</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const toggle = document.getElementById('navbar-toggle');
+        const navMenu = document.getElementById('navbar-nav');
+
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+
+        // Close menu on link click
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggle.classList.remove('active');
+                navMenu.classList.remove('open');
+            });
+        });
+
+        // Scroll animations using IntersectionObserver
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger animation for grid items
+                    const parent = entry.target.parentElement;
+                    if (parent && parent.classList.contains('services-grid')) {
+                        const siblings = Array.from(parent.querySelectorAll('.animate-on-scroll'));
+                        const i = siblings.indexOf(entry.target);
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, i * 120);
+                    } else {
+                        entry.target.classList.add('visible');
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Calendly Widget Script -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script>
+        function fixCalendlyIframe() {
+            const container = document.getElementById('calendly-container');
+            const wrapper = document.querySelector('.calendly-wrapper');
+            if (!container) return;
+
+            const iframe = container.querySelector('iframe');
+            if (iframe) {
+                iframe.style.height = '700px';
+                iframe.style.minHeight = '700px';
+                iframe.style.width = '100%';
+                iframe.style.border = 'none';
+                if (wrapper) wrapper.classList.add('loaded');
+                return true;
+            }
+            return false;
+        }
+
+        window.addEventListener('load', function () {
+            if (typeof Calendly !== 'undefined') {
+                Calendly.initInlineWidget({
+                    url: 'https://calendly.com/carbayo-carbal-pablo9/30min',
+                    parentElement: document.getElementById('calendly-container')
+                });
+
+                // Watch for the iframe to appear and fix its size
+                const observer = new MutationObserver(function () {
+                    if (fixCalendlyIframe()) {
+                        observer.disconnect();
+                    }
+                });
+
+                observer.observe(document.getElementById('calendly-container'), {
+                    childList: true,
+                    subtree: true
+                });
+
+                // Fallback: poll every 500ms for 10 seconds
+                let attempts = 0;
+                const interval = setInterval(function () {
+                    attempts++;
+                    if (fixCalendlyIframe() || attempts > 20) {
+                        clearInterval(interval);
+                    }
+                }, 500);
+            }
+        });
+    </script>
 
 </body>
+
 </html>
